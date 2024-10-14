@@ -7,6 +7,7 @@ Nesta parte implementamos uma máquina de estados que identifica quando uma entr
 Segue uma ilustração do funcionamento: 
 
 <img src="imgs/p1f1.png">
+<img src="imgs/p1f2.jpg">
 
 ## Parte 4 - Tradutor Morse usando máquina de estados:
 
