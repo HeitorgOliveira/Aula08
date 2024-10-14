@@ -12,4 +12,4 @@ Segue uma ilustração do funcionamento:
 
 Nesta parte implementamos um tradutor morse usando uma máquina de estados. O circuito recebe uma letra do alfabeto entre A e H e retorna como output o seu respectivo código morse. Segue a tabela morse para cada uma das letras:
 
-<img src="imgs/p2f1.png">
+<img src="imgs/p2f1.jpg">
