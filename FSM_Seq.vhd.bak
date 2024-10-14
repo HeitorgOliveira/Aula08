@@ -1,0 +1,128 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity FSM_Seq is
+    port (
+        clk     : in std_logic;
+        reset_n : in std_logic; -- reset
+        w       : in std_logic;
+        z       : out std_logic;
+        state   : out std_logic_vector(8 downto 0) -- outputs
+    );
+end entity;
+
+architecture Behavioral of FSM_Seq is
+    signal current_state : std_logic_vector(8 downto 0) := "000000001"; -- A
+    signal next_state    : std_logic_vector(8 downto 0);
+    
+begin
+
+    process(clk, reset_n) 
+    begin
+        if reset_n = '0' then
+            current_state <= "000000001"; -- Reset pro A
+        elsif rising_edge(clk) then
+            current_state <= next_state;
+        end if;
+    end process;
+
+    -- Next state logic
+    process(current_state, w) 
+    begin
+        case current_state is
+            when "000000001" => -- State A
+                if w = '0' then
+                    next_state <= "000000010"; -- State B
+                elsif w = '1' then
+                    next_state <= "000000100"; -- State C
+                else
+                    next_state <= current_state;
+                end if;
+                
+            when "000000010" => -- State B
+                if w = '0' then
+                    next_state <= "000000010"; -- Stay in B
+                elsif w = '1' then
+                    next_state <= "000000100"; -- State C
+                else
+                    next_state <= current_state;
+                end if;
+
+            when "000000100" => -- State C
+                if w = '0' then
+                    next_state <= "000001000"; -- State D
+                elsif w = '1' then
+                    next_state <= "000000001"; -- Back to A
+                else
+                    next_state <= current_state;
+                end if;
+
+            when "000001000" => -- State D
+                if w = '0' then
+                    next_state <= "000010000"; -- State E
+                elsif w = '1' then
+                    next_state <= "000000001"; -- Back to A
+                else
+                    next_state <= current_state;
+                end if;
+
+            when "000010000" => -- State E
+                if w = '0' then
+                    next_state <= "000100000"; -- State F
+                elsif w = '1' then
+                    next_state <= "000000001"; -- Back to A
+                else
+                    next_state <= current_state;
+                end if;
+
+            when "000100000" => -- State F
+                if w = '0' then
+                    next_state <= "001000000"; -- State G
+                elsif w = '1' then
+                    next_state <= "000000001"; -- Back to A
+                else
+                    next_state <= current_state;
+                end if;
+
+            when "001000000" => -- State G
+                if w = '0' then
+                    next_state <= "010000000"; -- State H
+                elsif w = '1' then
+                    next_state <= "000000001"; -- Back to A
+                else
+                    next_state <= current_state;
+                end if;
+
+            when "010000000" => -- State H
+                if w = '0' then
+                    next_state <= "100000000"; -- State I
+                elsif w = '1' then
+                    next_state <= "000000001"; -- Back to A
+                else
+                    next_state <= current_state;
+                end if;
+
+            when "100000000" => -- State I
+                if w = '0' then
+                    next_state <= "000000001"; -- Back to A
+                elsif w = '1' then
+                    next_state <= "000000001"; -- Back to A
+                else
+                    next_state <= current_state;
+                end if;
+                
+            when others => next_state <= "000000001"; -- Default to A
+        end case;
+    end process;
+
+    -- Output logic
+    z <= '1' when current_state = "000000011" or current_state = "000000101" or 
+             current_state = "000001001" or current_state = "000010001" or
+             current_state = "000100001" or current_state = "001000001" or 
+             current_state = "010000001" or current_state = "100000001" else '0';
+
+    -- State output assignments
+    state <= current_state;
+
+end architecture;

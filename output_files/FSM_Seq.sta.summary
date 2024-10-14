@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -9.708
+TNS   : -70.338
+
+Type  : Slow 1100mV 85C Model Setup 'w'
+Slack : -4.848
+TNS   : -4.848
+
+Type  : Slow 1100mV 85C Model Hold 'w'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -7.262
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'w'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -9.357
+TNS   : -66.998
+
+Type  : Slow 1100mV 0C Model Setup 'w'
+Slack : -4.958
+TNS   : -4.958
+
+Type  : Slow 1100mV 0C Model Hold 'w'
+Slack : 0.249
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -7.195
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'w'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -5.772
+TNS   : -45.723
+
+Type  : Fast 1100mV 85C Model Setup 'w'
+Slack : -1.878
+TNS   : -1.878
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'w'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.267
+TNS   : -2.431
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'w'
+Slack : -0.162
+TNS   : -1.376
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -4.864
+TNS   : -38.544
+
+Type  : Fast 1100mV 0C Model Setup 'w'
+Slack : -1.856
+TNS   : -1.856
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'w'
+Slack : 0.263
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.262
+TNS   : -2.395
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'w'
+Slack : -0.158
+TNS   : -1.437
+
+------------------------------------------------------------
