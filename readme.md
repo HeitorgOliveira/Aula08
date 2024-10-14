@@ -6,4 +6,4 @@ Nesta parte implementamos uma máquina de estados que identifica quando uma entr
 
 Segue uma ilustração do funcionamento: 
 
-<img src="p1f1.png">
+<img src="imgs/p1f1.png">
